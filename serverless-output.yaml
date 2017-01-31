@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  TestFunction:
+    Properties:
+      CodeUri: s3://sam-pipeline-sk/567488c1699ec9d05faaa5678e516278
+      Environment:
+        Variables:
+          S3_BUCKET: bucket-name
+      Handler: index.handler
+      Runtime: nodejs4.3
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
